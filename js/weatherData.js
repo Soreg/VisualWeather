@@ -87,11 +87,18 @@ function editCards(days) {
   }
 
   // Animate cards in
+  // For each card in html..
   $.each($('.card'), function(i, el){
       setTimeout(function(){
-         $(el).css(
-          'transform', 'scale(1)'
-         );
+        // Remove display:none
+        $(el).show();
+         $(el).animate({
+           // Animate opacity in
+           'opacity': '1'
+           // Opacity animation time
+        }, 600);
+        // Timeout function - difference in time between cards
       },500 + ( i * 300 ));
   });
-}
+
+} // end of editCards
