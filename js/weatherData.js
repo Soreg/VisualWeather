@@ -16,21 +16,22 @@ function processData(data) {
   var weeklySummary = data.daily.summary;
   $("#weeklySummary").html(weeklySummary).fadeTo("slow", 1);
 
-  // Day 1
-  var day0 = data.daily.data[0];
-  var day1 = data.daily.data[1];
-  var day2 = data.daily.data[2];
-  var day3 = data.daily.data[3];
-  var day4 = data.daily.data[4];
-  var day5 = data.daily.data[5];
-  var day6 = data.daily.data[6];
-  var day7 = data.daily.data[7];
-
+// Assign daily infomation to array
+var days = [
+  data.daily.data[0],
+  data.daily.data[1],
+  data.daily.data[2],
+  data.daily.data[3]
+]
 
   // Send daily data to EditCards
-  editCards(day0,day1,day2,day3,day4,day5,day6,day7)
+  editCards(days)
 }
 
-function editCards(day0,day1,day2,day3,day4,day5,day6,day7) {
-  console.log(day3);
+// Note: This function will assign data to HTML elements, for each day of the week.
+// This function may be large. Please provide useful comments where need be.
+function editCards(days) {
+  // For loop to assign data to every card
+  for (var i = 0; i < days.length; i++) {
+  }
 }
