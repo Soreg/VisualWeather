@@ -20,6 +20,7 @@ $( document ).ready(function() {
             // Send latitude + longitude to weatherData function
             weatherData(lat, lon);
             // Assign city name to #city, and fade in
+            $("#city").css("font-style", "italic");
             $("#city").html("<h1>" + city + "</h1>");
             $("#city").fadeTo("slow", 1);
           },
