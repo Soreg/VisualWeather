@@ -31,33 +31,58 @@ var days = [
 // Note: This function will assign data to HTML elements, for each day of the week.
 // This function may be large. Please provide useful comments where need be.
 function editCards(days) {
+  // Set month names
+  var month = ["January ", "February ", "March ", "April ", "May ", "June ",
+  "July ", "August ", "September ","October ", "November ", "December "];
+  // Set day names
+  var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
+  "Friday", "Saturday"];
+  // Get date
+  var date = new Date();
+
+
   // For loop to assign data to every card
   for (var i = 0; i < days.length; i++) {
-    console.log(days[i].icon);
+    // Convert day + month numbers to strings (Using the arrays)
+    var dateMonth = month[date.getMonth()];
+    var dateDay = day[date.getDay()];
+    var dateDate = date.getDate();
+    var dateString = dateDay + ", " + dateMonth + dateDate;
     // Check to see weather states
     /* -- CLOUDY -- */
     if (days[i].icon === "partly-cloudy-day" || days[i].icon === "partly-cloudy-night" || days[i].icon === "cloudy") {
       $("#forecastDay" + [i]).addClass("cloudy");
+      $("#forecastDay" + [i] + " .data .weatherType").html("Cloudy");
     }
     /* -- SUNNY -- */
     else if (days[i].icon === "clear-day" || days[i].icon === "clear-night") {
       $("#forecastDay" + [i]).addClass("sunny");
+      $("#forecastDay" + [i] + " .data .weatherType").html("Sunny");
     }
     /* -- RAIN -- */
     else if (days[i].icon === "rain") {
       $("#forecastDay" + [i]).addClass("rain");
+      $("#forecastDay" + [i] + " .data .weatherType").html("Rain");
     }
     /* -- SNOW -- */
     else if (days[i].icon === "snow" || days[i].icon === "sleet") {
       $("#forecastDay" + [i]).addClass("snow");
+      $("#forecastDay" + [i] + " .data .weatherType").html("Snow");
     }
     /* -- WINDY -- */
     else if (days[i].icon === "wind") {
       $("#forecastDay" + [i]).addClass("windy");
+      $("#forecastDay" + [i] + " .data .weatherType").html("Windy");
     }
     /* -- FOG -- */
     else {
       $("#forecastDay" + [i]).addClass("fog");
+      $("#forecastDay" + [i] + " .data .weatherType").html("Fog");
     }
+
+    // Add data to all cards
+    $("#forecastDay" + [i] + " .data .degrees").html(days[i].apparentTemperatureMax);
+    date.setDate(date.getDate() + 1);
+    $("#forecastDay" + [i] + " .data .date").html(dateString);
   }
 }
