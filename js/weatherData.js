@@ -85,4 +85,13 @@ function editCards(days) {
     date.setDate(date.getDate() + 1);
     $("#forecastDay" + [i] + " .data .date").html(dateString);
   }
+
+  // Animate cards in
+  $.each($('.card'), function(i, el){
+      setTimeout(function(){
+         $(el).css(
+          'transform', 'scale(1)'
+         );
+      },500 + ( i * 300 ));
+  });
 }
