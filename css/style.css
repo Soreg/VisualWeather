@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  min-height: 100%;
+}
+body {
+  margin-top: 60px;
+  background: lightblue; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(right top, #e9cfc4, #858fba); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom left, #e9cfc4, #858fba); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom left, #e9cfc4, #858fba); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom left, #e9cfc4, #858fba); /* Standard syntax */
+}
+
+#city {
+  text-decoration: underline;
+}
+#city input {
+  background: none;
+  border-style: none none solid none;
+  padding: 10px;
+}
+
+#city input:focus {
+  outline: none;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgb(99, 98, 98);
+
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: rgb(99, 98, 98);
+  text-align: center;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: rgb(99, 98, 98);
+  text-align: center;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: rgb(99, 98, 98);
+  text-align: center;
+}
+
+.forecast {
+  margin-top:100px;
+  position: relative;
+}
+
+.forecastDay {
+  min-height: 400px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 3px 20px 5px rgba(0,0,0,0.39);
+  -moz-box-shadow: 0px 3px 20px 5px rgba(0,0,0,0.39);
+  box-shadow: 0px 3px 20px 5px rgba(0,0,0,0.39);
+  overflow: hidden;
+}
+
+.forecastDay:hover {
+  color: red !important;
+}
+
+#rain {
+  background: lightblue; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(top, #141e30, #243b55); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, #141e30, #243b55); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, #141e30, #243b55); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, #141e30, #243b55); /* Standard syntax */
+}
+
+#cloudy {
+  background: #283048; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(top, #283048, #859398); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, #283048, #859398); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, #283048, #859398); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, #283048, #859398); /* Standard syntax */
+}
+
+#sunny {
+  background: #cdeef6; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(#fff9a1, #cdeef6); /* For Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(#fff9a1, #cdeef6); /* For Opera 11.1 to 12.0 */
+  background: -moz-radial-gradient(#fff9a1, #cdeef6); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#fff9a1, #cdeef6); /* Standard syntax */
+}
