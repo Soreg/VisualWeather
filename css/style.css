@@ -26,6 +26,11 @@ body {
 #city input:focus {
   outline: none;
 }
+
+#weeklySummary {
+  opacity: 0;
+}
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: rgb(99, 98, 98);
 
