@@ -107,6 +107,10 @@ body {
   ========================================
 */
 
+.card {
+  margin-bottom: 30px;
+}
+
 .forecast {
   margin-top:100px;
   position: relative;
@@ -123,7 +127,7 @@ body {
 
 /*
   ========================================
-  Individual cards
+  Cards - Individual Styles
   ========================================
 */
 
@@ -150,3 +154,27 @@ body {
   background: -moz-radial-gradient(#fff9a1, #cdeef6); /* For Firefox 3.6 to 15 */
   background: radial-gradient(#fff9a1, #cdeef6); /* Standard syntax */
 }
+
+/*
+  ========================================
+  Cards - Weather Related Styles
+  ========================================
+*/
+
+/*
+  ========================================
+  Cards - Weather animation styles
+  ========================================
+*/
+
+/*
+  ========================================
+  Animations - General
+  ========================================
+*/
+
+/*
+  ========================================
+  Media styles
+  ========================================
+*/
