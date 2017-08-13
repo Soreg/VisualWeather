@@ -14,6 +14,7 @@ function weatherData(lat, lon) {
 function processData(data) {
   // Assign data
   var weeklySummary = data.daily.summary;
+  $("#weeklySummary").html(weeklySummary).fadeTo("slow", 1);
 
   // Day 1
   var day0 = data.daily.data[0];
@@ -24,8 +25,12 @@ function processData(data) {
   var day5 = data.daily.data[5];
   var day6 = data.daily.data[6];
   var day7 = data.daily.data[7];
+
+
+  // Send daily data to EditCards
+  editCards(day0,day1,day2,day3,day4,day5,day6,day7)
 }
 
-function EditCards() {
-
+function editCards(day0,day1,day2,day3,day4,day5,day6,day7) {
+  console.log(day3);
 }
