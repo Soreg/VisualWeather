@@ -1,5 +1,12 @@
 /*
   ========================================
+  Imports
+  ========================================
+*/
+@import url('https://fonts.googleapis.com/css?family=Abel|Karla');
+
+/*
+  ========================================
   General
   ========================================
 */
@@ -18,6 +25,7 @@ body {
   background: -o-linear-gradient(bottom left, #e9cfc4, #858fba); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(bottom left, #e9cfc4, #858fba); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom left, #e9cfc4, #858fba); /* Standard syntax */
+  font-family: 'Abel', sans-serif;
 }
 
 /*
@@ -26,19 +34,27 @@ body {
   ========================================
 */
 
+#city {
+  font-family: 'Karla', sans-serif;
+  font-size: 4rem;
+}
+
+#weeklySummary {
+  margin-top: 30px;
+}
+
 .data {
   color: white;
 }
 
 .data .degrees {
   margin-top: 10px;
-  font-size: 2.2rem;
-  font-weight: bold;
+  font-size: 2.8rem;
+
 }
 
 .data .date {
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .data .weatherType {
@@ -54,10 +70,6 @@ body {
   City - Section
   ========================================
 */
-
-#city {
-  text-decoration: underline;
-}
 #city input {
   background: none;
   border-style: none none solid none;
