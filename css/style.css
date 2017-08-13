@@ -167,12 +167,23 @@ body {
   ========================================
 */
 
+
 /*
   ========================================
   Animations - General
   ========================================
 */
-
+.forecastDay:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: none;
+  -webkit-box-shadow: 0px 3px 20px 5px rgba(0,0,0,0.39);
+  -moz-box-shadow: 0px 3px 20px 5px rgba(0,0,0,0.39);
+  box-shadow: 0px 3px 20px 5px rgba(0,0,0,0.39);
+}
+.forecastDay {
+  transition: all ease-in-out 0.3s;
+}
 /*
   ========================================
   Media styles
