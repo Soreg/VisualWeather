@@ -19,4 +19,11 @@ function fadeCardIn() {
         // Timeout function - difference in time between cards
       },500 + ( i * 300 ));
   });
+};
+
+/*
+  Cloudy Card animations
+*/
+function animateCloudy() {
+  console.log("Hello World, it's cloudy!");
 }
