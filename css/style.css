@@ -62,8 +62,27 @@ body {
   overflow: hidden;
 }
 
-.forecastDay:hover {
-  color: red !important;
+.data {
+  color: white;
+}
+
+.data .degrees {
+  margin-top: 10px;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.data .date {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.data .weatherType {
+  font-weight: bold;
+}
+
+.sunny .data {
+  color: rgb(37, 37, 37);
 }
 
 .rain {
