@@ -81,7 +81,7 @@ function editCards(days) {
     }
 
     // Add data to all cards
-    $("#forecastDay" + [i] + " .data .degrees").html(days[i].apparentTemperatureMax);
+    $("#forecastDay" + [i] + " .data .degrees").html(days[i].apparentTemperatureMax + "°");
     date.setDate(date.getDate() + 1);
     $("#forecastDay" + [i] + " .data .date").html(dateString);
   }
