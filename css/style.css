@@ -44,7 +44,9 @@ body {
 }
 
 .data {
-  color: white;
+  top: 0;
+  position: absolute;
+  color: black;
 }
 
 .data .degrees {

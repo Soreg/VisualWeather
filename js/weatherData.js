@@ -53,7 +53,8 @@ function editCards(days) {
     if (days[i].icon === "partly-cloudy-day" || days[i].icon === "partly-cloudy-night" || days[i].icon === "cloudy") {
       $("#forecastDay" + [i]).addClass("cloudy");
       $("#forecastDay" + [i] + " .data .weatherType").html("Cloudy");
-      animateCloudy();
+      // Get cloudy animation with index
+      animateCloudy(i);
     }
     /* -- SUNNY -- */
     else if (days[i].icon === "clear-day" || days[i].icon === "clear-night") {
