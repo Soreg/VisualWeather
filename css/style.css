@@ -47,6 +47,7 @@ body {
   top: 0;
   position: absolute;
   color: black;
+  z-index: 3;
 }
 
 .data .degrees {
@@ -119,7 +120,7 @@ body {
 }
 
 .forecastDay {
-  min-height: 400px;
+  height: 400px;
   border-radius: 5px;
   -webkit-box-shadow: 0px 3px 20px 5px rgba(0,0,0,0.39);
   -moz-box-shadow: 0px 3px 20px 5px rgba(0,0,0,0.39);

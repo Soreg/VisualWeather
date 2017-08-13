@@ -4,8 +4,9 @@
   ========================================
 */
 /* CLOUDS */
-/* Cloud1 */
-.cloudy .cloud1 {
+/* Cloud 1 */
+
+.clouds .cloud1 {
   position: relative;
   background: rgb(237, 235, 235);
   width: 350px;
@@ -15,16 +16,16 @@
   -moz-border-radius: 70px / 80px;
   -webkit-border-radius: 70px / 80px;
   border-radius: 70px / 80px;
+  z-index: 2
 }
 
-.cloudy .cloud1:after, .cloudy .cloud1:before {
+.clouds .cloud1:after, .clouds .cloud1:before {
 	content: '';
 	position: absolute;
   background: rgb(237, 235, 235);
-	z-index: 0
 }
 
-.cloudy .cloud1:after {
+.clouds .cloud1:after {
 	width: 200px; height: 200px;
   right: 150px;
   top: 10px;
@@ -32,13 +33,89 @@
 	-moz-border-radius: 100px / 60px;
   border-radius: 100px / 60px;
 }
-.cloudy .cloud1:before {
+.clouds .cloud1:before {
 	width: 200px; height: 200px;
   right: 50px;
   top: 10px;
 	-webkit-border-radius: 100px / 60px;
 	-moz-border-radius: 100px / 60px;
   border-radius: 100px / 60px;
+}
+
+/* Cloud 2 */
+.clouds .cloud2 {
+  z-index: 0;
+  position: relative;
+  background: rgb(203, 199, 199);
+  width: 350px;
+  height: 200px;
+  left: -60px;
+  top: -320px;
+  -moz-border-radius: 70px / 80px;
+  -webkit-border-radius: 70px / 80px;
+  border-radius: 70px / 80px;
+  z-index: 1;
+}
+
+.clouds .cloud2:after, .clouds .cloud2:before {
+	content: '';
+	position: absolute;
+  background: rgb(203, 199, 199)
+}
+
+.clouds .cloud2:after {
+	width: 200px; height: 200px;
+  right: 150px;
+  top: 5px;
+	-webkit-border-radius: 100px / 60px;
+	-moz-border-radius: 100px / 60px;
+  border-radius: 100px / 60px;
+}
+.clouds .cloud2:before {
+	width: 200px; height: 200px;
+  right: 50px;
+  top: 15px;
+	-webkit-border-radius: 80px / 50px;
+	-moz-border-radius: 80px / 50px;
+  border-radius: 80px / 50px;
+}
+
+/* Cloud 3 */
+.clouds .cloud3 {
+  z-index: 0;
+  position: relative;
+  background: rgb(181, 177, 177);
+  width: 350px;
+  height: 200px;
+  left: -60px;
+  top: -490px;
+  -moz-border-radius: 70px / 80px;
+  -webkit-border-radius: 70px / 80px;
+  border-radius: 70px / 80px;
+  z-index: 0;
+}
+
+.clouds .cloud3:after, .clouds .cloud3:before {
+	content: '';
+	position: absolute;
+  background: rgb(181, 177, 177);
+}
+
+.clouds .cloud3:after {
+	width: 200px; height: 200px;
+  right: 150px;
+  top: 10px;
+	-webkit-border-radius: 100px / 60px;
+	-moz-border-radius: 100px / 60px;
+  border-radius: 100px / 60px;
+}
+.clouds .cloud3:before {
+	width: 200px; height: 200px;
+  right: 50px;
+  top: 10px;
+	-webkit-border-radius: 100px / 60px;
+	-moz-border-radius: 100px / 60px;
+  border-radius: 100px / 40px;
 }
 
 /*
