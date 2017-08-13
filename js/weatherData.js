@@ -12,5 +12,20 @@ function weatherData(lat, lon) {
 }
 
 function processData(data) {
-  console.log(data.daily.summary);
+  // Assign data
+  var weeklySummary = data.daily.summary;
+
+  // Day 1
+  var day0 = data.daily.data[0];
+  var day1 = data.daily.data[1];
+  var day2 = data.daily.data[2];
+  var day3 = data.daily.data[3];
+  var day4 = data.daily.data[4];
+  var day5 = data.daily.data[5];
+  var day6 = data.daily.data[6];
+  var day7 = data.daily.data[7];
+}
+
+function EditCards() {
+
 }
