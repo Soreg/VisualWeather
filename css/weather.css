@@ -6,7 +6,7 @@
 /* CLOUDS */
 /* Cloud 1 */
 
-.clouds .cloud1 {
+.cloudy .clouds .cloud1 {
   position: relative;
   background: rgb(237, 235, 235);
   width: 350px;
@@ -19,13 +19,13 @@
   z-index: 2
 }
 
-.clouds .cloud1:after, .clouds .cloud1:before {
+.cloudy .clouds .cloud1:after, .cloudy .clouds .cloud1:before {
 	content: '';
 	position: absolute;
   background: rgb(237, 235, 235);
 }
 
-.clouds .cloud1:after {
+.cloudy .clouds .cloud1:after {
 	width: 200px; height: 200px;
   right: 150px;
   top: 10px;
@@ -33,7 +33,7 @@
 	-moz-border-radius: 100px / 60px;
   border-radius: 100px / 60px;
 }
-.clouds .cloud1:before {
+.cloudy .clouds .cloud1:before {
 	width: 200px; height: 200px;
   right: 50px;
   top: 10px;
@@ -43,7 +43,7 @@
 }
 
 /* Cloud 2 */
-.clouds .cloud2 {
+.cloudy .clouds .cloud2 {
   z-index: 0;
   position: relative;
   background: rgb(203, 199, 199);
@@ -57,13 +57,13 @@
   z-index: 1;
 }
 
-.clouds .cloud2:after, .clouds .cloud2:before {
+.cloudy .clouds .cloud2:after, .cloudy .clouds .cloud2:before {
 	content: '';
 	position: absolute;
   background: rgb(203, 199, 199)
 }
 
-.clouds .cloud2:after {
+.cloudy .clouds .cloud2:after {
 	width: 200px; height: 200px;
   right: 150px;
   top: 5px;
@@ -71,7 +71,7 @@
 	-moz-border-radius: 100px / 60px;
   border-radius: 100px / 60px;
 }
-.clouds .cloud2:before {
+.cloudy .clouds .cloud2:before {
 	width: 200px; height: 200px;
   right: 50px;
   top: 15px;
@@ -81,7 +81,7 @@
 }
 
 /* Cloud 3 */
-.clouds .cloud3 {
+.cloudy .clouds .cloud3 {
   z-index: 0;
   position: relative;
   background: rgb(181, 177, 177);
@@ -95,13 +95,13 @@
   z-index: 0;
 }
 
-.clouds .cloud3:after, .clouds .cloud3:before {
+.cloudy .clouds .cloud3:after, .cloudy .clouds .cloud3:before {
 	content: '';
 	position: absolute;
   background: rgb(181, 177, 177);
 }
 
-.clouds .cloud3:after {
+.cloudy .clouds .cloud3:after {
 	width: 200px; height: 200px;
   right: 150px;
   top: 10px;
@@ -109,7 +109,7 @@
 	-moz-border-radius: 100px / 60px;
   border-radius: 100px / 60px;
 }
-.clouds .cloud3:before {
+.cloudy .clouds .cloud3:before {
 	width: 200px; height: 200px;
   right: 50px;
   top: 10px;
@@ -142,3 +142,108 @@
   Rain
   ========================================
 */
+/* Rain */
+.rainy {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: -10px;
+  background: url(../img/rain.png);
+  animation: rain .5s linear infinite;
+}
+
+.rainy:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  animation: lighting .s3 linear infinite;
+  opacity: 0;
+}
+
+@keyframes rain {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 20% 100%;
+  }
+}
+
+/* Clouds */
+/* Cloud 1 */
+.rain .clouds .cloud1 {
+  position: relative;
+  background: rgb(226, 223, 223);
+  width: 350px;
+  height: 200px;
+  left: -60px;
+  top: -140px;
+  -moz-border-radius: 70px / 80px;
+  -webkit-border-radius: 70px / 80px;
+  border-radius: 70px / 80px;
+  z-index: 2
+}
+
+.rain .clouds .cloud1:after, .rain .clouds .cloud1:before {
+	content: '';
+	position: absolute;
+  background: rgb(226, 223, 223);
+}
+
+.rain .clouds .cloud1:after {
+	width: 150px; height: 180px;
+  right: 170px;
+  top: 30px;
+	-webkit-border-radius: 100px / 60px;
+	-moz-border-radius: 100px / 60px;
+  border-radius: 100px / 60px;
+}
+.rain .clouds .cloud1:before {
+	width: 200px; height: 200px;
+  right: 40px;
+  top: 10px;
+	-webkit-border-radius: 90px / 60px;
+	-moz-border-radius: 90px / 60px;
+  border-radius: 90px / 60px;
+}
+
+/* Cloud 2 */
+.rain .clouds .cloud2 {
+  z-index: 0;
+  position: relative;
+  background: rgb(171, 167, 167);
+  width: 350px;
+  height: 200px;
+  left: -60px;
+  top: -320px;
+  -moz-border-radius: 70px / 80px;
+  -webkit-border-radius: 70px / 80px;
+  border-radius: 70px / 80px;
+  z-index: 1;
+}
+
+.rain .clouds .cloud2:after, .rain .clouds .cloud2:before {
+	content: '';
+	position: absolute;
+  background: rgb(171, 167, 167);
+}
+
+.rain .clouds .cloud2:after {
+	width: 200px; height: 200px;
+  right: 150px;
+  top: 20px;
+	-webkit-border-radius: 100px / 60px;
+	-moz-border-radius: 100px / 60px;
+  border-radius: 100px / 80px;
+}
+.rain .clouds .cloud2:before {
+	width: 200px; height: 200px;
+  right: 30px;
+  top: 25px;
+	-webkit-border-radius: 80px / 50px;
+	-moz-border-radius: 80px / 50px;
+  border-radius: 95px / 50px;
+}

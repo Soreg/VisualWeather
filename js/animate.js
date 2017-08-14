@@ -30,31 +30,29 @@ function animateCloudy(i) {
 
   // Animate cloud 1
   var cloudy1anim = function() {
-    $(".clouds .cloud1").animate({left: "-80px"}, 2500, function() {
+    $(".cloudy .clouds .cloud1").animate({left: "-80px"}, 2500, function() {
         $(this).animate({left: "-30px"}, 2200)
     })
  setTimeout(cloudy1anim, 4700);
 }
 // Animate cloud 2
 var cloudy2anim = function() {
-  $(".clouds .cloud2").animate({"left": "-70px"}, 2500, function() {
+  $(".cloudy .clouds .cloud2").animate({"left": "-70px"}, 2500, function() {
       $(this).animate({left: "-50px"}, 2700)
   })
 setTimeout(cloudy2anim, 5200);
 }
 // Animate cloud 3
 var cloudy3anim = function() {
-  $(".clouds .cloud3").animate({left: "-50px"}, 3600, function() {
+  $(".cloudy .clouds .cloud3").animate({left: "-50px"}, 3600, function() {
       $(this).animate({left: "-70px"}, 4000)
   })
 setTimeout(cloudy3anim, 7600);
 }
-// Run animations
-// Cloudy
+// Cloudy animations
 cloudy1anim();
 cloudy2anim();
 cloudy3anim();
-// Sunny
 }
 
 /*
@@ -70,7 +68,33 @@ function animateSunny(i) {
     })
  setTimeout(sunnyanim, 4500);
 }
-
+// Sunny animations
 sunnyanim();
 
+}
+
+
+/*
+  Rainy Card animations
+*/
+function animateRain(i) {
+  $("#forecastDay" + [i]).prepend("<div class='clouds'><div class='cloud1'></div><div class='cloud2'></div></div><div class='rainy'></div>");
+
+  // Animate cloud 1
+  var rainy1anim = function() {
+    $(".rain .clouds .cloud1").animate({left: "-50px"}, 3500, function() {
+        $(this).animate({left: "-60px"}, 3000)
+    })
+ setTimeout(rainy1anim, 6500);
+}
+// Animate cloud 2
+var rainy2anim = function() {
+  $(".rain .clouds .cloud2").animate({"left": "-70px"}, 2500, function() {
+      $(this).animate({left: "-50px"}, 2700)
+  })
+setTimeout(rainy2anim, 5200);
+}
+// Rainy animations
+rainy1anim();
+rainy2anim();
 }
