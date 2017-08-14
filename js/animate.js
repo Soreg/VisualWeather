@@ -49,13 +49,28 @@ var cloudy3anim = function() {
   })
 setTimeout(cloudy3anim, 7600); // added back
 }
-
 // Run animations
+// Cloudy
 cloudy1anim();
 cloudy2anim();
 cloudy3anim();
+// Sunny
 }
 
 /*
   Sunny Card animations
 */
+function animateSunny(i) {
+  // Create sun
+  $("#forecastDay" + [i]).prepend("<div class='sun'></div>");
+  // Animate sun
+  var sunnyanim = function() {
+    $(".sun").animate({"width": "80px", "height": "80px"}, 1500, function() {
+        $(this).animate({"width": "110px", "height": "110px"}, 3000)
+    })
+ setTimeout(sunnyanim, 4500); // added back
+}
+
+sunnyanim();
+
+}

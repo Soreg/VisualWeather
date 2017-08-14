@@ -60,6 +60,8 @@ function editCards(days) {
     else if (days[i].icon === "clear-day" || days[i].icon === "clear-night") {
       $("#forecastDay" + [i]).addClass("sunny");
       $("#forecastDay" + [i] + " .data .weatherType").html("Sunny");
+      // Get sunny animation with index
+      animateSunny(i);
     }
     /* -- RAIN -- */
     else if (days[i].icon === "rain") {
