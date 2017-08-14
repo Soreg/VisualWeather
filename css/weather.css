@@ -126,12 +126,15 @@
 .sun {
   width: 100px;
   height: 100px;
-  background: rgb(252, 234, 112);
+  background: #e6cf3b;
   border-radius: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 29px 8px rgba(230,207,59,1);
+
+
 }
 
 /*

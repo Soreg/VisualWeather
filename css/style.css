@@ -167,10 +167,10 @@ body {
 
 .sunny {
   background: #cdeef6; /* For browsers that do not support gradients */
-  background: -webkit-radial-gradient(#fff9a1, #cdeef6); /* For Safari 5.1 to 6.0 */
-  background: -o-radial-gradient(#fff9a1, #cdeef6); /* For Opera 11.1 to 12.0 */
-  background: -moz-radial-gradient(#fff9a1, #cdeef6); /* For Firefox 3.6 to 15 */
-  background: radial-gradient(#fff9a1, #cdeef6); /* Standard syntax */
+  background: -webkit-radial-gradient(#d6f1f7, #bdebf6); /* For Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(#d6f1f7, #bdebf6); /* For Opera 11.1 to 12.0 */
+  background: -moz-radial-gradient(#d6f1f7, #bdebf6); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#d6f1f7, #bdebf6); /* Standard syntax */
 }
 
 /*
