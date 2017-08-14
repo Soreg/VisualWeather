@@ -7,7 +7,7 @@
 */
 // For each card in html..
 function fadeCardIn() {
-  $.each($('.card'), function(i, el){
+  $.each($('.card, .poweredBy'), function(i, el){
       setTimeout(function(){
         // Remove display:none
         $(el).show();
