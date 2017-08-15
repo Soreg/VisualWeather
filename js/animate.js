@@ -95,3 +95,19 @@ var rainy2anim = function() {
 rainy1anim();
 rainy2anim();
 }
+
+// Hover animations
+// $( ".card" ).hover(
+//   function() {
+//     console.log();
+//     $(".clouds .cloud1", this).css("height", "400px");
+//   }
+// );
+
+$(".card").hover(function(){
+    $(".clouds .cloud1", this).css("height", "400px");
+    $(".pullDown", this).css("opacity", "1");
+    }, function(){
+    $(".clouds .cloud1", this).css("height", "200px");
+    $(".pullDown", this).css("opacity", "0");
+});

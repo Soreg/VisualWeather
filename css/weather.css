@@ -6,6 +6,10 @@
 /* CLOUDS */
 /* Cloud 1 */
 
+.clouds .cloud1 {
+  transition: all ease-in-out 0.3s;
+}
+
 .cloudy .clouds .cloud1 {
   position: relative;
   background: rgb(237, 235, 235);
