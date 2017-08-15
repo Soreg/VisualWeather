@@ -104,7 +104,7 @@ rainy2anim();
 //   }
 // );
 
-$(".card").hover(function(){
+$(".forecastDay").hover(function(){
     $(".sun", this).css("margin-top", "120px");
     $(".clouds .cloud1", this).css("height", "400px");
     $(".pullDown", this).css("opacity", "1");
