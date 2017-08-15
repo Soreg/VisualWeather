@@ -79,7 +79,8 @@ body {
   font-size: 1.3rem;
 }
 .pullDown h4.summary {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: bold;
 }
 
 .pullDown .heading {
