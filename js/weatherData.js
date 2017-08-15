@@ -91,9 +91,9 @@ function editCards(days) {
     date.setDate(date.getDate() + 1);
     $("#forecastDay" + [i] + " .data .date").html(dateString);
     $("#forecastDay" + [i] + " .pullDown .summary").html(days[i].summary);
-    $("#forecastDay" + [i] + " .pullDown .cloudCover").html(days[i].cloudCover);
+    $("#forecastDay" + [i] + " .pullDown .cloudCover").html(days[i].cloudCover * 100 + "%");
     $("#forecastDay" + [i] + " .pullDown .windSpeed").html(days[i].windSpeed);
-    $("#forecastDay" + [i] + " .pullDown .humidity").html(days[i].humidity);
+    $("#forecastDay" + [i] + " .pullDown .humidity").html(days[i].humidity * 100 + "%");
     $("#forecastDay" + [i] + " .pullDown .dewPoint").html(days[i].dewPoint);
   }
 
