@@ -90,6 +90,11 @@ function editCards(days) {
     $("#forecastDay" + [i] + " .data .degrees").html(days[i].apparentTemperatureMax + "°");
     date.setDate(date.getDate() + 1);
     $("#forecastDay" + [i] + " .data .date").html(dateString);
+    $("#forecastDay" + [i] + " .pullDown .summary").html(days[i].summary);
+    $("#forecastDay" + [i] + " .pullDown .cloudCover").html(days[i].cloudCover);
+    $("#forecastDay" + [i] + " .pullDown .windSpeed").html(days[i].windSpeed);
+    $("#forecastDay" + [i] + " .pullDown .humidity").html(days[i].humidity);
+    $("#forecastDay" + [i] + " .pullDown .dewPoint").html(days[i].dewPoint);
   }
 
   // Animate cards in

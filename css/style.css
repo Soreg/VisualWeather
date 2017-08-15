@@ -71,6 +71,22 @@ body {
   color: rgb(37, 37, 37);
 }
 
+.pullDown {
+  
+}
+.pullDown h4 {
+  font-size: 1.3rem;
+}
+.pullDown h4.summary {
+  font-size: 1.8rem;
+}
+
+.pullDown .heading {
+  font-size: 1.7rem;
+  font-style: italic;
+  padding-bottom: 0;
+}
+
 .poweredBy {
   font-style: italic;
   display: none;
