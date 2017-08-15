@@ -6,7 +6,7 @@
 /* CLOUDS */
 /* Cloud 1 */
 
-.clouds .cloud1 {
+.clouds .cloud1, .sun {
   transition: all ease-in-out 0.3s;
 }
 
