@@ -3,7 +3,7 @@
   Imports
   ========================================
 */
-@import url('https://fonts.googleapis.com/css?family=Abel|Karla');
+@import url('https://fonts.googleapis.com/css?family=Abel|Roboto');
 
 /*
   ========================================
@@ -35,7 +35,7 @@ body {
 */
 
 #city {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 4rem;
 }
 
@@ -239,3 +239,11 @@ body {
   Media styles
   ========================================
 */
+
+@media only screen and (max-width: 576px) {
+
+  #city {
+    font-size: 2rem;
+  }
+
+}
