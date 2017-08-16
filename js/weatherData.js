@@ -79,6 +79,7 @@ function editCards(days) {
     else if (days[i].icon === "wind") {
       $("#forecastDay" + [i]).addClass("windy");
       $("#forecastDay" + [i] + " .data .weatherType").html("Windy");
+      animateWindy(i);
     }
     /* -- FOG -- */
     else {

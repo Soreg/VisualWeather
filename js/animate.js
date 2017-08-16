@@ -114,9 +114,39 @@ var foggy2anim = function() {
     .animate({left: "-70px"}, 2500)
     .animate({left: "-50px"}, 2700, foggy2anim);
   }
-// Rainy animations
+// Foggy animations
 foggy1anim();
 foggy2anim();
+}
+
+/*
+  Windy
+*/
+function animateWindy(i) {
+  $("#forecastDay" + [i]).prepend("</div><div class='clouds'><div class='cloud1'></div><div class='cloud2'></div><div class='cloud3'></div>");
+
+  // Animate cloud 1
+  var windy1anim = function() {
+    $(".windy .clouds .cloud1")
+      .animate({left: "50"}, 1000)
+      .animate({left: "-170"}, 1000, windy1anim);
+  }
+// Animate cloud 2
+var windy2anim = function() {
+  $(".windy .clouds .cloud2")
+    .animate({left: "-70"}, 500)
+    .animate({left: "-50"}, 700, windy2anim);
+  }
+// Animate cloud 3
+  var windy3anim = function() {
+  $(".windy .clouds .cloud3")
+    .animate({left: "-50px"}, 800)
+    .animate({left: "-70px"}, 1200, windy3anim);
+  }
+// Foggy animations
+windy1anim();
+windy2anim();
+windy3anim();
 }
 
 $(".forecastDay").hover(function(){

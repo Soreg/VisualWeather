@@ -198,18 +198,12 @@ body {
   background: radial-gradient(#d6f1f7, #bdebf6); /* Standard syntax */
 }
 
-/*
-  ========================================
-  Cards - Weather Related Styles
-  ========================================
-*/
-
-/*
-  ========================================
-  Cards - Weather animation styles
-  ========================================
-*/
-
+.windy {
+  background: rgb(150,213,242); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(150,213,242,1) 1%, rgba(94,217,242,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(150,213,242,1) 1%,rgba(94,217,242,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(150,213,242,1) 1%,rgba(94,217,242,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
 
 /*
   ========================================
