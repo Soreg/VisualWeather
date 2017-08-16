@@ -83,7 +83,9 @@ function editCards(days) {
     /* -- FOG -- */
     else {
       $("#forecastDay" + [i]).addClass("fog");
-      $("#forecastDay" + [i] + " .data .weatherType").html("Fog");
+      $("#forecastDay" + [i] + " .data .weatherType").html("Foggy");
+      // Get foggy animation with index
+      animateFog(i);
     }
 
     // Add data to all cards

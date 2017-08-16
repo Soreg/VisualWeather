@@ -96,13 +96,28 @@ rainy1anim();
 rainy2anim();
 }
 
-// Hover animations
-// $( ".card" ).hover(
-//   function() {
-//     console.log();
-//     $(".clouds .cloud1", this).css("height", "400px");
-//   }
-// );
+/*
+  Foggy
+*/
+function animateFog(i) {
+  $("#forecastDay" + [i]).prepend("<div class='sun'></div><div class='clouds'><div class='cloud1'></div><div class='cloud2'></div></div>");
+
+  // Animate cloud 1
+  var foggy1anim = function() {
+    $(".fog .clouds .cloud1")
+      .animate({left: "-50px"}, 3500)
+      .animate({left: "-60px"}, 3000, foggy1anim);
+  }
+// Animate cloud 2
+var foggy2anim = function() {
+  $(".fog .clouds .cloud2")
+    .animate({left: "-70px"}, 2500)
+    .animate({left: "-50px"}, 2700, foggy2anim);
+  }
+// Rainy animations
+foggy1anim();
+foggy2anim();
+}
 
 $(".forecastDay").hover(function(){
     $(".sun", this).css("margin-top", "120px");

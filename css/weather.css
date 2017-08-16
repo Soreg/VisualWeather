@@ -251,3 +251,86 @@
 	-moz-border-radius: 80px / 50px;
   border-radius: 95px / 50px;
 }
+
+
+/*
+  ========================================
+  Cloudy
+  ========================================
+*/
+
+/* Clouds */
+/* Cloud 1 */
+.fog .clouds .cloud1 {
+  position: relative;
+  background: rgb(226, 223, 223);
+  width: 350px;
+  height: 200px;
+  left: -60px;
+  top: -140px;
+  -moz-border-radius: 70px / 80px;
+  -webkit-border-radius: 70px / 80px;
+  border-radius: 70px / 80px;
+  z-index: 2
+}
+
+.fog .clouds .cloud1:after, .fog .clouds .cloud1:before {
+	content: '';
+	position: absolute;
+  background: rgb(226, 223, 223);
+}
+
+.fog .clouds .cloud1:after {
+	width: 150px; height: 180px;
+  right: 170px;
+  top: 30px;
+	-webkit-border-radius: 100px / 60px;
+	-moz-border-radius: 100px / 60px;
+  border-radius: 100px / 60px;
+}
+.fog .clouds .cloud1:before {
+	width: 200px; height: 200px;
+  right: 40px;
+  top: 10px;
+	-webkit-border-radius: 90px / 60px;
+	-moz-border-radius: 90px / 60px;
+  border-radius: 90px / 60px;
+}
+
+/* Cloud 2 */
+.fog .clouds .cloud2 {
+  z-index: 0;
+  position: relative;
+  background: rgba(171, 167, 167, 0.5);
+  width: 350px;
+  height: 600px;
+  left: -60px;
+  top: -320px;
+  -moz-border-radius: 70px / 80px;
+  -webkit-border-radius: 70px / 80px;
+  border-radius: 70px / 80px;
+  z-index: 1;
+}
+
+.fog .clouds .cloud2:after, .fog .clouds .cloud2:before {
+	content: '';
+	position: absolute;
+  background: rgba(155, 151, 151, 0.5)
+}
+
+.fog .clouds .cloud2:after {
+	width: 200px; height: 160px;
+  right: 240px;
+  bottom: 240px;
+	-webkit-border-radius: 100px / 80px;
+	-moz-border-radius: 100px / 80px;
+  border-radius: 100px / 80px;
+}
+.fog .clouds .cloud2:before {
+	width: 200px; height: 150px;
+  right: -50px;
+  bottom: 110px;
+	-webkit-border-radius: 95px / 80px;
+	-moz-border-radius: 95px / 80px;
+  border-radius: 100px / 80px;
+}
