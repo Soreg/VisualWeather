@@ -1,17 +1,43 @@
 /*
   ========================================
+  General
+  ========================================
+*/
+
+.cloud1, .sun {
+  transition: all ease-in-out 0.3s;
+}
+
+.cloud1, .cloud2, .cloud3 {
+  position: relative;
+}
+
+.clouds .cloud1 {
+  z-index: 2;
+}
+
+.clouds .cloud2 {
+  z-index: 1;
+}
+
+.clouds .cloud3 {
+  z-index: 0;
+}
+
+.cloud1:after, .cloud1:before,.cloud2:after, .cloud2:before,.cloud3:after, .cloud3:before {
+	content: '';
+	position: absolute;
+}
+
+/*
+  ========================================
   Cloudy
   ========================================
 */
 /* CLOUDS */
 /* Cloud 1 */
 
-.clouds .cloud1, .sun {
-  transition: all ease-in-out 0.3s;
-}
-
 .cloudy .clouds .cloud1 {
-  position: relative;
   background: rgb(237, 235, 235);
   width: 350px;
   height: 200px;
@@ -20,12 +46,9 @@
   -moz-border-radius: 70px / 80px;
   -webkit-border-radius: 70px / 80px;
   border-radius: 70px / 80px;
-  z-index: 2
 }
 
 .cloudy .clouds .cloud1:after, .cloudy .clouds .cloud1:before {
-	content: '';
-	position: absolute;
   background: rgb(237, 235, 235);
 }
 
@@ -48,8 +71,6 @@
 
 /* Cloud 2 */
 .cloudy .clouds .cloud2 {
-  z-index: 0;
-  position: relative;
   background: rgb(203, 199, 199);
   width: 350px;
   height: 200px;
@@ -58,12 +79,9 @@
   -moz-border-radius: 70px / 80px;
   -webkit-border-radius: 70px / 80px;
   border-radius: 70px / 80px;
-  z-index: 1;
 }
 
 .cloudy .clouds .cloud2:after, .cloudy .clouds .cloud2:before {
-	content: '';
-	position: absolute;
   background: rgb(203, 199, 199)
 }
 
@@ -86,8 +104,6 @@
 
 /* Cloud 3 */
 .cloudy .clouds .cloud3 {
-  z-index: 0;
-  position: relative;
   background: rgb(181, 177, 177);
   width: 350px;
   height: 200px;
@@ -96,12 +112,9 @@
   -moz-border-radius: 70px / 80px;
   -webkit-border-radius: 70px / 80px;
   border-radius: 70px / 80px;
-  z-index: 0;
 }
 
 .cloudy .clouds .cloud3:after, .cloudy .clouds .cloud3:before {
-	content: '';
-	position: absolute;
   background: rgb(181, 177, 177);
 }
 
@@ -177,7 +190,6 @@
 /* Clouds */
 /* Cloud 1 */
 .rain .clouds .cloud1 {
-  position: relative;
   background: rgb(226, 223, 223);
   width: 350px;
   height: 200px;
@@ -186,12 +198,9 @@
   -moz-border-radius: 70px / 80px;
   -webkit-border-radius: 70px / 80px;
   border-radius: 70px / 80px;
-  z-index: 2
 }
 
 .rain .clouds .cloud1:after, .rain .clouds .cloud1:before {
-	content: '';
-	position: absolute;
   background: rgb(226, 223, 223);
 }
 
@@ -214,8 +223,6 @@
 
 /* Cloud 2 */
 .rain .clouds .cloud2 {
-  z-index: 0;
-  position: relative;
   background: rgb(171, 167, 167);
   width: 350px;
   height: 200px;
@@ -224,12 +231,9 @@
   -moz-border-radius: 70px / 80px;
   -webkit-border-radius: 70px / 80px;
   border-radius: 70px / 80px;
-  z-index: 1;
 }
 
 .rain .clouds .cloud2:after, .rain .clouds .cloud2:before {
-	content: '';
-	position: absolute;
   background: rgb(171, 167, 167);
 }
 
@@ -260,7 +264,6 @@
 /* Clouds */
 /* Cloud 1 */
 .fog .clouds .cloud1 {
-  position: relative;
   background: rgb(226, 223, 223);
   width: 350px;
   height: 200px;
@@ -269,12 +272,9 @@
   -moz-border-radius: 70px / 80px;
   -webkit-border-radius: 70px / 80px;
   border-radius: 70px / 80px;
-  z-index: 2
 }
 
 .fog .clouds .cloud1:after, .fog .clouds .cloud1:before {
-	content: '';
-	position: absolute;
   background: rgb(226, 223, 223);
 }
 
@@ -297,8 +297,6 @@
 
 /* Cloud 2 */
 .fog .clouds .cloud2 {
-  z-index: 0;
-  position: relative;
   background: rgba(171, 167, 167, 0.5);
   width: 350px;
   height: 600px;
@@ -307,12 +305,9 @@
   -moz-border-radius: 70px / 80px;
   -webkit-border-radius: 70px / 80px;
   border-radius: 70px / 80px;
-  z-index: 1;
 }
 
 .fog .clouds .cloud2:after, .fog .clouds .cloud2:before {
-	content: '';
-	position: absolute;
   background: rgba(155, 151, 151, 0.5)
 }
 
@@ -341,12 +336,7 @@
 /* CLOUDS */
 /* Cloud 1 */
 
-.windy .cloud1, .sun {
-  transition: all ease-in-out 0.3s;
-}
-
 .windy .clouds .cloud1 {
-  position: relative;
   background: rgb(250, 250, 250);
   width: 350px;
   height: 200px;
@@ -355,12 +345,9 @@
   -moz-border-radius: 70px / 80px;
   -webkit-border-radius: 70px / 80px;
   border-radius: 70px / 80px;
-  z-index: 2
 }
 
 .windy .clouds .cloud1:after, .windy .clouds .cloud1:before {
-	content: '';
-	position: absolute;
   background: rgb(250, 250, 250);
 }
 
@@ -383,8 +370,6 @@
 
 /* Cloud 2 */
 .windy .clouds .cloud2 {
-  z-index: 0;
-  position: relative;
   background: rgb(242, 237, 237);
   width: 350px;
   height: 200px;
@@ -393,12 +378,9 @@
   -moz-border-radius: 70px / 80px;
   -webkit-border-radius: 70px / 80px;
   border-radius: 70px / 80px;
-  z-index: 1;
 }
 
 .windy .clouds .cloud2:after, .windy .clouds .cloud2:before {
-	content: '';
-	position: absolute;
   background: rgb(242, 237, 237);
 }
 
@@ -421,8 +403,6 @@
 
 /* Cloud 3 */
 .windy .clouds .cloud3 {
-  z-index: 0;
-  position: relative;
   background: rgb(232, 230, 230);
   width: 350px;
   height: 200px;
@@ -431,12 +411,9 @@
   -moz-border-radius: 70px / 80px;
   -webkit-border-radius: 70px / 80px;
   border-radius: 70px / 80px;
-  z-index: 0;
 }
 
 .windy .clouds .cloud3:after, .windy .clouds .cloud3:before {
-	content: '';
-	position: absolute;
   background: rgb(232, 230, 230);
 }
 
@@ -466,12 +443,7 @@
 /* CLOUDS */
 /* Cloud 1 */
 
-.snow .cloud1, .sun {
-  transition: all ease-in-out 0.3s;
-}
-
 .snow .clouds .cloud1 {
-  position: relative;
   background: rgb(250, 250, 250);
   width: 350px;
   height: 200px;
@@ -480,12 +452,9 @@
   -moz-border-radius: 70px / 80px;
   -webkit-border-radius: 70px / 80px;
   border-radius: 70px / 80px;
-  z-index: 2
 }
 
 .snow .clouds .cloud1:after, .snow .clouds .cloud1:before {
-	content: '';
-	position: absolute;
   background: rgb(250, 250, 250);
 }
 
@@ -508,8 +477,6 @@
 
 /* Cloud 2 */
 .snow .clouds .cloud2 {
-  z-index: 0;
-  position: relative;
   background: rgb(242, 237, 237);
   width: 350px;
   height: 200px;
@@ -518,12 +485,9 @@
   -moz-border-radius: 70px / 80px;
   -webkit-border-radius: 70px / 80px;
   border-radius: 70px / 80px;
-  z-index: 1;
 }
 
 .snow .clouds .cloud2:after, .snow .clouds .cloud2:before {
-	content: '';
-	position: absolute;
   background: rgb(242, 237, 237);
 }
 
