@@ -153,12 +153,28 @@ windy3anim();
   Snow
 */
 function animateSnow(i) {
+  $("#forecastDay" + [i]).prepend("</div><div class='clouds'><div class='cloud1'></div><div class='cloud2'></div>");
+
+  // Animate cloud 1
+  var snow1anim = function() {
+    $(".snow .clouds .cloud1")
+      .animate({left: "-20"}, 2500)
+      .animate({left: "-80"}, 2000, snow1anim);
+  }
+// Animate cloud 2
+var snow2anim = function() {
+  $(".snow .clouds .cloud2")
+    .animate({left: "-70"}, 1900)
+    .animate({left: "-50"}, 2300, snow2anim);
+  }
 
   var snowAnim = function() {
     $(".snow").snowfall();
     $(".snow").snowfall({flakeCount : 100, maxSpeed : 10});
   }
 // Snowy animations
+snow1anim();
+snow2anim();
 snowAnim();
 }
 
