@@ -170,7 +170,7 @@ var snow2anim = function() {
 
   var snowAnim = function() {
     $(".snow").snowfall();
-    $(".snow").snowfall({flakeCount : 100, maxSpeed : 10});
+    $(".snow").snowfall({flakeCount : 10, maxSpeed : 10});
   }
 // Snowy animations
 snow1anim();
