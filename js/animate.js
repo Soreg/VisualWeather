@@ -149,6 +149,19 @@ windy2anim();
 windy3anim();
 }
 
+/*
+  Snow
+*/
+function animateSnow(i) {
+
+  var snowAnim = function() {
+    $(".snow").snowfall();
+    $(".snow").snowfall({flakeCount : 100, maxSpeed : 10});
+  }
+// Snowy animations
+snowAnim();
+}
+
 $(".forecastDay").hover(function(){
     $(".sun", this).css("margin-top", "120px");
     $(".clouds .cloud1", this).css("height", "400px");
