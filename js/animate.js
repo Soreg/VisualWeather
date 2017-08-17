@@ -96,13 +96,87 @@ rainy1anim();
 rainy2anim();
 }
 
-// Hover animations
-// $( ".card" ).hover(
-//   function() {
-//     console.log();
-//     $(".clouds .cloud1", this).css("height", "400px");
-//   }
-// );
+/*
+  Foggy
+*/
+function animateFog(i) {
+  $("#forecastDay" + [i]).prepend("<div class='sun'></div><div class='clouds'><div class='cloud1'></div><div class='cloud2'></div></div>");
+
+  // Animate cloud 1
+  var foggy1anim = function() {
+    $(".fog .clouds .cloud1")
+      .animate({left: "-50px"}, 3500)
+      .animate({left: "-60px"}, 3000, foggy1anim);
+  }
+// Animate cloud 2
+var foggy2anim = function() {
+  $(".fog .clouds .cloud2")
+    .animate({left: "-70px"}, 2500)
+    .animate({left: "-50px"}, 2700, foggy2anim);
+  }
+// Foggy animations
+foggy1anim();
+foggy2anim();
+}
+
+/*
+  Windy
+*/
+function animateWindy(i) {
+  $("#forecastDay" + [i]).prepend("</div><div class='clouds'><div class='cloud1'></div><div class='cloud2'></div><div class='cloud3'></div>");
+
+  // Animate cloud 1
+  var windy1anim = function() {
+    $(".windy .clouds .cloud1")
+      .animate({left: "50"}, 1000)
+      .animate({left: "-170"}, 1000, windy1anim);
+  }
+// Animate cloud 2
+var windy2anim = function() {
+  $(".windy .clouds .cloud2")
+    .animate({left: "-70"}, 500)
+    .animate({left: "-50"}, 700, windy2anim);
+  }
+// Animate cloud 3
+  var windy3anim = function() {
+  $(".windy .clouds .cloud3")
+    .animate({left: "-50px"}, 800)
+    .animate({left: "-70px"}, 1200, windy3anim);
+  }
+// Foggy animations
+windy1anim();
+windy2anim();
+windy3anim();
+}
+
+/*
+  Snow
+*/
+function animateSnow(i) {
+  $("#forecastDay" + [i]).prepend("</div><div class='clouds'><div class='cloud1'></div><div class='cloud2'></div>");
+
+  // Animate cloud 1
+  var snow1anim = function() {
+    $(".snow .clouds .cloud1")
+      .animate({left: "-20"}, 2500)
+      .animate({left: "-80"}, 2000, snow1anim);
+  }
+// Animate cloud 2
+var snow2anim = function() {
+  $(".snow .clouds .cloud2")
+    .animate({left: "-70"}, 1900)
+    .animate({left: "-50"}, 2300, snow2anim);
+  }
+
+  var snowAnim = function() {
+    $(".snow").snowfall();
+    $(".snow").snowfall({flakeCount : 10, maxSpeed : 10});
+  }
+// Snowy animations
+snow1anim();
+snow2anim();
+snowAnim();
+}
 
 $(".forecastDay").hover(function(){
     $(".sun", this).css("margin-top", "120px");

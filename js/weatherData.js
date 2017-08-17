@@ -74,16 +74,20 @@ function editCards(days) {
     else if (days[i].icon === "snow" || days[i].icon === "sleet") {
       $("#forecastDay" + [i]).addClass("snow");
       $("#forecastDay" + [i] + " .data .weatherType").html("Snow");
+      animateSnow(i);
     }
     /* -- WINDY -- */
     else if (days[i].icon === "wind") {
       $("#forecastDay" + [i]).addClass("windy");
       $("#forecastDay" + [i] + " .data .weatherType").html("Windy");
+      animateWindy(i);
     }
     /* -- FOG -- */
     else {
       $("#forecastDay" + [i]).addClass("fog");
-      $("#forecastDay" + [i] + " .data .weatherType").html("Fog");
+      $("#forecastDay" + [i] + " .data .weatherType").html("Foggy");
+      // Get foggy animation with index
+      animateFog(i);
     }
 
     // Add data to all cards
