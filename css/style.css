@@ -112,7 +112,8 @@ body {
 #city input {
   background: none;
   border-style: none none solid none;
-  padding: 10px;
+  padding: 10px; /*comment this out to see effect of padding */
+  width: 500px;
 }
 
 #city input:focus {
@@ -160,7 +161,7 @@ body {
   height: 400px;
   display:block;
   margin: auto;
-  max-width: 263px;
+  width: 262px;
   border-radius: 5px;
   -webkit-box-shadow: 0px 3px 20px 5px rgba(0,0,0,0.39);
   -moz-box-shadow: 0px 3px 20px 5px rgba(0,0,0,0.39);
@@ -241,3 +242,27 @@ body {
   Media styles
   ========================================
 */
+/*
+  Note - Cards needs a fixed width for Lokar's snowfall to work. max-width does not work.
+*/
+@media (max-width: 1199px) {
+  .forecastDay {
+    width: 212px;
+  }
+}
+
+
+@media (max-width: 991px) {
+  .forecastDay {
+    width: 265px;
+  }
+}
+
+@media (max-width: 576px) {
+  #city {
+    font-size: 2.5rem;
+  }
+  #city input {
+    width: 300px;
+  }
+}
