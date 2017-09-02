@@ -94,6 +94,12 @@ var rainy2anim = function() {
 // Rainy animations
 rainy1anim();
 rainy2anim();
+// Run startRain animation once cards are loaded in
+setTimeout(
+  function()
+  {
+    startRain();
+  }, 1500);
 }
 
 /*
@@ -159,27 +165,6 @@ function animateSnow(i) {
     $(".snow").snowfall();
     $(".snow").snowfall({flakeCount : 10, maxSpeed : 10});
   }
-
-//   // Animate cloud 1
-//   var snow1anim = function() {
-//     $(".snow .clouds .cloud1")
-//       .animate({left: "-20"}, 2500)
-//       .animate({left: "-80"}, 2000, snow1anim);
-//   }
-// // Animate cloud 2
-// var snow2anim = function() {
-//   $(".snow .clouds .cloud2")
-//     .animate({left: "-70"}, 1900)
-//     .animate({left: "-50"}, 2300, snow2anim);
-//   }
-//
-//   var snowAnim = function() {
-//     $(".snow").snowfall();
-//     $(".snow").snowfall({flakeCount : 10, maxSpeed : 10});
-//   }
-// Snowy animations
-// snow1anim();
-// snow2anim();
 snowAnim();
 }
 
@@ -198,7 +183,6 @@ $(".forecastDay").hover(function(){
   }
     $(".sun", this).css("margin-top", sunMargin);
     $(".clouds .cloud1", this).css("height", cloudHeight);
-    console.log(cloudHeight);
     $(".pullDown", this).css("opacity", "1");
     }, function(){
     $(".sun", this).css("margin-top", "0");
