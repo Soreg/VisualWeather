@@ -184,8 +184,21 @@ snowAnim();
 }
 
 $(".forecastDay").hover(function(){
-    $(".sun", this).css("margin-top", "120px");
-    $(".clouds .cloud1", this).css("height", "400px");
+  // Detect with of screen
+  var screenWidth = $("body").width();
+  // Default values
+  var cloudHeight = "370px";
+  var sunMargin = "120px";
+  // Set height of animated elements based on width of screen
+  if (screenWidth <= 991) {
+    cloudHeight = "450px";
+    sunMargin = "145px";
+  } else if (screenWidth <= 1199) {
+    cloudHeight = "390px";
+  }
+    $(".sun", this).css("margin-top", sunMargin);
+    $(".clouds .cloud1", this).css("height", cloudHeight);
+    console.log(cloudHeight);
     $(".pullDown", this).css("opacity", "1");
     }, function(){
     $(".sun", this).css("margin-top", "0");
