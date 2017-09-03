@@ -25,12 +25,12 @@ var days = [
 ]
 
   // Send daily data to EditCards
-  editCards(days)
+  editCards(days, data)
 }
 
 // Note: This function will assign data to HTML elements, for each day of the week.
 // This function may be large. Please provide useful comments where need be.
-function editCards(days) {
+function editCards(days, data) {
   // Set month names
   var month = ["January ", "February ", "March ", "April ", "May ", "June ",
   "July ", "August ", "September ","October ", "November ", "December "];
@@ -91,7 +91,12 @@ function editCards(days) {
     }
 
     // Add data to all cards
-    $("#forecastDay" + [i] + " .data .degrees").html(days[i].apparentTemperatureMax + "°");
+    var units = data.flags.units;
+    if (units == "us") {
+      $("#forecastDay" + [i] + " .data .degrees").html(days[i].apparentTemperatureMax + "°F");
+    } else {
+      $("#forecastDay" + [i] + " .data .degrees").html(days[i].apparentTemperatureMax + "°C");
+    }
     date.setDate(date.getDate() + 1);
     $("#forecastDay" + [i] + " .data .date").html(dateString);
     $("#forecastDay" + [i] + " .pullDown .summary").html(days[i].summary);
