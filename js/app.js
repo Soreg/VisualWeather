@@ -14,19 +14,24 @@ $( document ).ready(function() {
           dataType: 'json',
           success: function(data) {
             // Assign city, latitude and longitude
-            city = data.Results[0].name;
-            var lat = data.Results[0].lat;
-            var lon = data.Results[0].lon;
-            // Send latitude + longitude to weatherData function
-            weatherData(lat, lon);
-            // Assign city name to #city, and fade in
-            $("#city").css("font-style", "italic");
-            $("#city").html("<h1>" + city + "</h1>");
-            $("#city").fadeTo("slow", 1);
+            if (data.Results.length === 0) {
+              invalidCity(city);
+            } else {
+              city = data.Results[0].name;
+              var lat = data.Results[0].lat;
+              var lon = data.Results[0].lon;
+              // Send latitude + longitude to weatherData function
+              weatherData(lat, lon);
+              // Assign city name to #city, and fade in
+              $("#city").css("font-style", "italic");
+              $("#city").html("<h1>" + city + "</h1>");
+              $("#city").fadeTo("slow", 1);
+            }
           },
           error: function(err) {
             // Give error message if JSON is unresponsive
-            $("#city").html("<h1 class='text-danger'>Json not responding - Please contact me so I can solve the issue</h1>");
+            $("#city input").val('');
+            $("#city .errorMessage").html("Json not responding - Please try again");
             $("#city").fadeTo("slow", 1);
           },
           beforeSend: function(xhr) {
@@ -34,6 +39,14 @@ $( document ).ready(function() {
           }
           });
         });
+
+        // Invalid city input
+        function invalidCity(city) {
+          $("#city input").val('');
+          $("#city .errorMessage").html("The city " + '"' + city + '"' + " could not be found. Please check your spelling, or choose another city.");
+          // Fade in inputs
+          $("#city").fadeTo("slow", 1);
+        }
       }
   });
 

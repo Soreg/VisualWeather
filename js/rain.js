@@ -1,19 +1,22 @@
 function startRain() {
   console.log("Rain started");
   var klick = "|";
+  // Rain creation function
   function countKlick() {
 
+    // Create elements
     var div = document.createElement("div");
-    var str = document.createTextNode(klick);
-    div.appendChild(str);
 
-
+    // Style raindrop
     div.style.position = 'absolute';
-    div.style.top = Math.floor(Math.random() * (0))+ "px";
-    div.style.left = Math.floor(Math.random() * (500)) + "px";
+    div.style.zIndex = "1";
+    div.style.top = "80px";
+    div.style.left = Math.floor(Math.random() * (400)) + "px";
     div.className = 'rainDrop';
     div.style.opacity = '0';
-    $(".rain").append(div);
+    $(".rain .rainy").append(div);
+
+    deleteDrop(div);
   }
 
 
@@ -25,6 +28,15 @@ function startRain() {
     variable = 150
   } else if (amount == 2) {
     variable = 100;
+  }
+
+  // Delete function
+  function deleteDrop(drop) {
+    // Run after timeout..
+    setTimeout(function(){
+      // Delete individual drops
+      drop.remove();
+    }, 1000);
   }
 
   window.setInterval(function(){

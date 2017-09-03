@@ -163,10 +163,12 @@
   height: 100vh;
   width: 100vw;
   top: 0;
-  left: -10px;
+  left: 30px;
 }
 
 .rainDrop {
+  width: 3px;
+  height: 10px;
   background: rgb(154, 159, 213);
   animation: rain 2s;
   -moz-animation: rain 2s; /* Firefox */
