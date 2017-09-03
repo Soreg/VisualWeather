@@ -30,7 +30,8 @@ $( document ).ready(function() {
           },
           error: function(err) {
             // Give error message if JSON is unresponsive
-            $("#city").html("<h1 class='text-danger'>Json not responding - Please contact me so I can solve the issue</h1>");
+            $("#city input").val('');
+            $("#city .errorMessage").html("Json not responding - Please try again");
             $("#city").fadeTo("slow", 1);
           },
           beforeSend: function(xhr) {
