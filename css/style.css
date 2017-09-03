@@ -39,6 +39,10 @@ body {
   font-size: 4rem;
 }
 
+#city .errorMessage {
+  font-style: italic;
+}
+
 #weeklySummary {
   margin-top: 30px;
 }
