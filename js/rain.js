@@ -1,5 +1,4 @@
 function startRain() {
-  console.log("Rain started");
   var klick = "|";
   // Rain creation function
   function countKlick() {
