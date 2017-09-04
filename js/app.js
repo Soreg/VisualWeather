@@ -14,7 +14,7 @@ $( document ).ready(function() {
           dataType: 'json',
           success: function(data) {
             // Assign city, latitude and longitude
-            if (data.Results.length === 0) {
+            if (data.Results === null || data.Results.length === 0) {
               invalidCity(city);
             } else {
               city = data.Results[0].name;
