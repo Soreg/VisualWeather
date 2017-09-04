@@ -97,7 +97,7 @@ body {
   font-style: italic;
   display: none;
   opacity: 0;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .poweredBy .text-powered {
   color: rgb(94, 6, 19);
@@ -156,7 +156,7 @@ body {
 }
 
 .forecast {
-  margin-top:100px;
+  margin-top:50px;
   position: relative;
 }
 
