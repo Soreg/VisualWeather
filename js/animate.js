@@ -172,7 +172,7 @@ $(".forecastDay").hover(function(){
   // Detect with of screen
   var screenWidth = $("body").width();
   // Default values
-  var cloudHeight = "370px";
+  var cloudHeight = "385px";
   var sunMargin = "120px";
   // Set height of animated elements based on width of screen
   if (screenWidth <= 991) {
