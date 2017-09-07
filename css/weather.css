@@ -13,7 +13,7 @@
 }
 
 .clouds .cloud1 {
-  z-index: 2;
+  z-index: 3;
   width: 400px;
   height: 200px;
   left: -30px;
@@ -21,11 +21,11 @@
 }
 
 .clouds .cloud2 {
-  z-index: 1;
+  z-index: 2;
 }
 
 .clouds .cloud3 {
-  z-index: 0;
+  z-index: 1;
 }
 
 .cloud1:after, .cloud1:before,.cloud2:after, .cloud2:before,.cloud3:after, .cloud3:before {
