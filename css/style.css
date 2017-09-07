@@ -117,7 +117,7 @@ body {
   background: none;
   border-style: none none solid none;
   padding: 10px; /*comment this out to see effect of padding */
-  width: 500px;
+  width: 420px;
 }
 
 #city input:focus {
