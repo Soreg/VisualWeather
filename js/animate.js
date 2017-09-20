@@ -38,15 +38,15 @@ function animateCloudy(i) {
 // Animate cloud 2
   var cloudy2anim = function() {
   $(".cloudy .clouds .cloud2")
-    .animate({left: "-70px"}, 2500)
-    .animate({left: "-50px"}, 2700, cloudy2anim);
+    .animate({left: "20px"}, 2500)
+    .animate({left: "50px"}, 2700, cloudy2anim);
   }
 
 // Animate cloud 3
   var cloudy3anim = function() {
   $(".cloudy .clouds .cloud3")
-    .animate({left: "-50px"}, 3600)
-    .animate({left: "-70px"}, 4000, cloudy3anim);
+    .animate({left: "50px"}, 3600)
+    .animate({left: "40px"}, 4000, cloudy3anim);
   }
 
 // Cloudy animations
@@ -88,8 +88,8 @@ function animateRain(i) {
 // Animate cloud 2
 var rainy2anim = function() {
   $(".rain .clouds .cloud2")
-    .animate({left: "-70px"}, 2500)
-    .animate({left: "-50px"}, 2700, rainy2anim);
+    .animate({left: "60px"}, 2500)
+    .animate({left: "40px"}, 2700, rainy2anim);
   }
 // Rainy animations
 rainy1anim();
@@ -134,8 +134,8 @@ function animateWindy(i) {
   // Animate cloud 1
   var windy1anim = function() {
     $(".windy .clouds .cloud1")
-      .animate({left: "50"}, 1000)
-      .animate({left: "-170"}, 1000, windy1anim);
+      .animate({left: "-200"}, 1000)
+      .animate({left: "-100"}, 1000, windy1anim);
   }
 // Animate cloud 2
 var windy2anim = function() {
