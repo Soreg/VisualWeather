@@ -26,6 +26,7 @@ body {
   background: -moz-linear-gradient(bottom left, #e9cfc4, #858fba); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom left, #e9cfc4, #858fba); /* Standard syntax */
   font-family: 'Abel', sans-serif;
+    overflow: hidden;
 }
 
 /*
@@ -247,15 +248,15 @@ body {
   ========================================
 */
 
-@media only screen and (max-width: 576px) {
-
-  #city {
-    font-size: 2rem;
-  }
-
 /*
   Note - Cards needs a fixed width for Lokar's snowfall to work. max-width does not work.
 */
+@media (max-width: 1199px) {
+  .forecastDay {
+    width: 212px;
+  }
+}
+    
 @media (max-width: 1199px) {
   .forecastDay {
     width: 212px;

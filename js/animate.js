@@ -64,8 +64,8 @@ function animateSunny(i) {
   // Animate sun
   var sunnyanim = function() {
     $(".sun")
-      .animate({width: "80px", height: "80px"}, 1500)
-      .animate({width: "110px", height: "110px"}, 3000, sunnyanim);
+      .animate({width: "70px", height: "70px"}, 5000)
+      .animate({width: "110px", height: "110px"}, 5000, sunnyanim);
   }
 // Sunny animations
 sunnyanim();
@@ -173,13 +173,14 @@ $(".forecastDay").hover(function(){
   var screenWidth = $("body").width();
   // Default values
   var cloudHeight = "385px";
-  var sunMargin = "120px";
+  var sunMargin = "110px";
   // Set height of animated elements based on width of screen
   if (screenWidth <= 991) {
     cloudHeight = "450px";
-    sunMargin = "145px";
+    sunMargin = "140px";
   } else if (screenWidth <= 1199) {
     cloudHeight = "390px";
+    sunMargin = "130px";
   }
     $(".sun", this).css("margin-top", sunMargin);
     $(".clouds .cloud1", this).css("height", cloudHeight);
