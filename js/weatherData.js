@@ -1,14 +1,14 @@
 function weatherData(lat, lon) {
   $.ajax({
-   type: 'GET',
-   dataType: 'jsonp',
-   data: {},
-   url: 'https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/b1771da80a45a69cc2fcaf3cdbe9ab1a/' + lat + ',' + lon + '?&units=auto',
-   dataType: "json",
-   success: function (data) {
-     processData(data);
-   }
- });
+    type: 'GET',
+    dataType: 'jsonp',
+    data: {},
+    url: 'https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/b1771da80a45a69cc2fcaf3cdbe9ab1a/' + lat + ',' + lon + '?&units=auto',
+    dataType: "json",
+    success: function (data) {
+      processData(data);
+    }
+  });
 }
 
 function processData(data) {
@@ -16,13 +16,15 @@ function processData(data) {
   var weeklySummary = data.daily.summary;
   $("#weeklySummary").html(weeklySummary).fadeTo("slow", 1);
 
-// Assign daily infomation to array
-var days = [
-  data.daily.data[0],
-  data.daily.data[1],
-  data.daily.data[2],
-  data.daily.data[3]
-]
+  // Assign daily infomation to array
+  var days = [
+    data.daily.data[0],
+    data.daily.data[1],
+    data.daily.data[2],
+    data.daily.data[3]
+  ]
+
+
 
   // Send daily data to EditCards
   editCards(days, data)
@@ -33,10 +35,10 @@ var days = [
 function editCards(days, data) {
   // Set month names
   var month = ["January ", "February ", "March ", "April ", "May ", "June ",
-  "July ", "August ", "September ","October ", "November ", "December "];
+    "July ", "August ", "September ", "October ", "November ", "December "];
   // Set day names
   var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
-  "Friday", "Saturday"];
+    "Friday", "Saturday"];
   // Get date
   var date = new Date();
 
@@ -109,4 +111,43 @@ function editCards(days, data) {
   // Animate cards in
   fadeCardIn();
 
+  $("#city h1").on("click", function () {
+    ChangeCityInput();
+  });
+
 } // end of editCards
+
+
+function ChangeCityInput() {
+  $("#city").html("<input class='text-center' type='text' placeholder='Please enter a city' autofocus=''>");
+  $("#city input").on("keydown", function (e) {
+    var city = this.value;
+    searchCity(e, city);
+  });
+}
+
+function ResetCards() {
+  for (var i = 0; i < 4; i++) {
+    // hide containers
+    $(".card").css('opacity', '0');
+    $(".poweredBy").css('opacity', '0');
+
+    // reset classes 
+    $("#forecastDay" + [i]).removeAttr('class');
+    $("#forecastDay" + [i]).addClass('col-md-12 forecastDay');
+
+    // clear HTML
+    $("#weeklySummary").empty();
+    $("#forecastDay" + [i] + " .data .weatherType").empty();
+    $("#forecastDay" + [i] + " .data .date").empty();
+    $("#forecastDay" + [i] + " .pullDown .summary").empty();
+    $("#forecastDay" + [i] + " .pullDown .cloudCover").empty();
+    $("#forecastDay" + [i] + " .pullDown .windSpeed").empty();
+    $("#forecastDay" + [i] + " .pullDown .humidity").empty()
+    $("#forecastDay" + [i] + " .pullDown .dewPoint").empty();
+    $("#forecastDay" + [i] + " .data .degrees").empty();
+
+    // remove prepended HTML
+    $("#prepended").remove();
+  }
+}
