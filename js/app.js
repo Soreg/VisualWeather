@@ -1,16 +1,16 @@
 // On document ready
 $(document).ready(function () {
 
-  $("#city input").on("keydown", function(e) {
+  $("#city input").on("keydown", function (e) {
     var city = this.value;
     searchCity(e, city);
   })
-  
+
 
 });
 
 function searchCity(e, city) {
-  if (e.keyCode == 13) { 
+  if (e.keyCode == 13) {
     ResetCards();
     $("#city").fadeTo("slow", 0, function () {
       //Call API
@@ -27,7 +27,7 @@ function searchCity(e, city) {
             city = data.Results[0].name;
             var lat = data.Results[0].lat;
             var lon = data.Results[0].lon;
-            
+
             // Send latitude + longitude to weatherData function
             weatherData(lat, lon);
             // Assign city name to #city, and fade in

@@ -32,13 +32,13 @@ function startRain() {
   // Delete function
   function deleteDrop(drop) {
     // Run after timeout..
-    setTimeout(function(){
+    setTimeout(function () {
       // Delete individual drops
       drop.remove();
     }, 1000);
   }
 
-  window.setInterval(function(){
+  window.setInterval(function () {
     countKlick();
   }, variable);
 }
