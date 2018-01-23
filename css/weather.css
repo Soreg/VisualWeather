@@ -278,6 +278,11 @@
   border-radius: 95px / 50px;
 }
 
+#prepended {
+  position: sticky;
+  z-index: 2;
+}
+
 
 /*
   ========================================
