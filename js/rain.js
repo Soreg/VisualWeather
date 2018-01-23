@@ -1,11 +1,11 @@
-function startRain() {
+function startRain(owner) {
   var klick = "|";
   // Rain creation function
   function countKlick() {
 
     // Create elements
     var div = document.createElement("div");
-
+    
     // Style raindrop
     div.style.position = 'absolute';
     div.style.zIndex = "1";
@@ -13,7 +13,7 @@ function startRain() {
     div.style.left = Math.floor(Math.random() * (400)) + "px";
     div.className = 'rainDrop';
     div.style.opacity = '0';
-    $(".rain .rainy").append(div);
+    $(owner + ".rain .rainy").append(div);
 
     deleteDrop(div);
   }

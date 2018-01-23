@@ -100,7 +100,7 @@ function animateRain(i) {
   // Run startRain animation once cards are loaded in
   setTimeout(
     function () {
-      startRain();
+      startRain("#forecastDay" + [i]);
     }, 1500);
 }
 
