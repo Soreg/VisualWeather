@@ -1,9 +1,9 @@
-function weatherData(lat, lon) {
+function weatherData(lat, lon, languageSelect) {
   $.ajax({
     type: 'GET',
     dataType: 'jsonp',
     data: {},
-    url: 'https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/b1771da80a45a69cc2fcaf3cdbe9ab1a/' + lat + ',' + lon + '?&units=auto',
+    url: 'https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/b1771da80a45a69cc2fcaf3cdbe9ab1a/' + lat + ',' + lon + '?&units=auto&lang=' + languageSelect,
     dataType: "json",
     success: function (data) {
       processData(data);
@@ -122,7 +122,9 @@ function ChangeCityInput() {
   $("#city").html("<input class='text-center' type='text' placeholder='Please enter a city' autofocus=''>");
   $("#city input").on("keydown", function (e) {
     var city = this.value;
-    searchCity(e, city);
+    var languageSelected = $("#languageSelect").val();
+    var key = e.keyCode;
+    searchCity(key, city, languageSelected);
   });
 }
 
@@ -151,3 +153,8 @@ function ResetCards() {
     $("#prepended").remove();
   }
 }
+
+var $dropdown = $("#languageSelect").on('change', function() {
+  var city = $("#city input").val();
+
+});
