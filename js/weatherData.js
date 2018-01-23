@@ -149,8 +149,10 @@ function ResetCards() {
     $("#forecastDay" + [i] + " .pullDown .dewPoint").empty();
     $("#forecastDay" + [i] + " .data .degrees").empty();
 
-    // remove prepended HTML
+    // remove HTML elements
     $("#prepended").remove();
+    $(".rainy").remove();
+    $(".snowfall-flakes").remove();
   }
 }
 
