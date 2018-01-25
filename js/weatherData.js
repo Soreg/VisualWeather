@@ -153,6 +153,7 @@ function ResetCards() {
     $("#prepended").remove();
     $(".rainy").remove();
     $(".snowfall-flakes").remove();
+    $(".snowContainer").remove();
   }
 }
 

@@ -161,11 +161,11 @@ function animateWindy(i) {
   Snow
 */
 function animateSnow(i) {
-  $("#forecastDay" + [i]).prepend("<div id='prepended' class='clouds'><div class='cloud1'></div><div class='cloud2'></div>");
+  $("#forecastDay" + [i]).prepend("<div id='prepended' class='clouds'><div class='cloud1'></div><div class='cloud2'></div></div><div class='snowContainer'></div>");
 
   var snowAnim = function () {
-    $(".snow").snowfall();
-    $(".snow").snowfall({ flakeCount: 10, maxSpeed: 10 });
+    // $(".snow #snowContainer").snowfall();
+    $(".snow .snowContainer").snowfall({ flakeCount: 10, maxSpeed: 10 });
   }
   snowAnim();
 }

@@ -461,6 +461,17 @@
   Snow
   ========================================
 */
+
+/* Snow container */
+.snow .snowContainer {
+  width: 300px;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 /* CLOUDS */
 /* Cloud 1 */
 
