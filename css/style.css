@@ -26,7 +26,6 @@ body {
   background: -moz-linear-gradient(bottom left, #e9cfc4, #858fba); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom left, #e9cfc4, #858fba); /* Standard syntax */
   font-family: 'Abel', sans-serif;
-    overflow: hidden;
 }
 
 /*
