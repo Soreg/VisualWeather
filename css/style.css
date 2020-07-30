@@ -3,7 +3,7 @@
   Imports
   ========================================
 */
-@import url('https://fonts.googleapis.com/css?family=Abel|Roboto');
+@import url("https://fonts.googleapis.com/css?family=Abel|Roboto");
 
 /*
   ========================================
@@ -12,20 +12,36 @@
 */
 
 * {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 html {
-  min-height: 100%;
+    min-height: 100%;
 }
 body {
-  margin-top: 60px;
-  background: lightblue; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(right top, #e9cfc4, #858fba); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom left, #e9cfc4, #858fba); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom left, #e9cfc4, #858fba); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom left, #e9cfc4, #858fba); /* Standard syntax */
-  font-family: 'Abel', sans-serif;
+    margin-top: 60px;
+    background: lightblue; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(
+        right top,
+        #e9cfc4,
+        #858fba
+    ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(
+        bottom left,
+        #e9cfc4,
+        #858fba
+    ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(
+        bottom left,
+        #e9cfc4,
+        #858fba
+    ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(
+        to bottom left,
+        #e9cfc4,
+        #858fba
+    ); /* Standard syntax */
+    font-family: "Abel", sans-serif;
     overflow: hidden;
 }
 
@@ -36,77 +52,76 @@ body {
 */
 
 #city {
-  font-family: 'Roboto', sans-serif;
-  font-size: 4rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 4rem;
 }
 
 #city .errorMessage {
-  font-style: italic;
+    font-style: italic;
 }
 
 #weeklySummary {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 .data {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  color: black;
-  z-index: 3;
-  padding: 0 10px; /* top - sides */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: black;
+    z-index: 3;
+    padding: 0 10px; /* top - sides */
 }
 
 .data .degrees {
-  margin-top: 10px;
-  font-size: 2.4rem;
-
+    margin-top: 10px;
+    font-size: 2.4rem;
 }
 
 .data .date {
-  font-size: 1.4rem;
+    font-size: 1.4rem;
 }
 
 .data .weatherType {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .sunny .data {
-  color: rgb(37, 37, 37);
+    color: rgb(37, 37, 37);
 }
 
 .pullDown {
-  opacity: 0;
-  transition: all ease-in-out 0.3s;
+    opacity: 0;
+    transition: all ease-in-out 0.3s;
 }
 .pullDown h4 {
-  font-size: 1.3rem;
+    font-size: 1.3rem;
 }
 .pullDown h4.summary {
-  font-size: 1.6rem;
-  font-weight: bold;
+    font-size: 1.6rem;
+    font-weight: bold;
 }
 
 .pullDown .heading {
-  font-size: 1.7rem;
-  font-style: italic;
-  padding-bottom: 0;
+    font-size: 1.7rem;
+    font-style: italic;
+    padding-bottom: 0;
 }
 
 .poweredBy {
-  font-style: italic;
-  display: none;
-  opacity: 0;
-  margin-top: 20px;
+    font-style: italic;
+    display: none;
+    opacity: 0;
+    margin-top: 20px;
 }
 .poweredBy .text-powered {
-  color: rgb(94, 6, 19);
-  text-decoration: none;
-  transition: all ease-in-out .3s;
+    color: rgb(94, 6, 19);
+    text-decoration: none;
+    transition: all ease-in-out 0.3s;
 }
 .poweredBy .text-powered:hover {
-  color: rgb(38, 2, 7);
+    color: rgb(38, 2, 7);
 }
 
 /*
@@ -115,35 +130,38 @@ body {
   ========================================
 */
 #city input {
-  background: none;
-  border-style: none none solid none;
-  padding: 10px; /*comment this out to see effect of padding */
-  width: 420px;
+    background: none;
+    border-style: none none solid none;
+    padding: 10px; /*comment this out to see effect of padding */
+    width: 420px;
 }
 
 #city input:focus {
-  outline: none;
+    outline: none;
 }
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: rgb(99, 98, 98);
-
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: rgb(99, 98, 98);
 }
-::-moz-placeholder { /* Firefox 19+ */
-  color: rgb(99, 98, 98);
-  text-align: center;
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgb(99, 98, 98);
+    text-align: center;
 }
-:-ms-input-placeholder { /* IE 10+ */
-  color: rgb(99, 98, 98);
-  text-align: center;
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgb(99, 98, 98);
+    text-align: center;
 }
-:-moz-placeholder { /* Firefox 18- */
-  color: rgb(99, 98, 98);
-  text-align: center;
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgb(99, 98, 98);
+    text-align: center;
 }
 
 #weeklySummary {
-  opacity: 0;
+    opacity: 0;
 }
 
 /*
@@ -153,25 +171,25 @@ body {
 */
 
 .card {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .forecast {
-  margin-top:50px;
-  position: relative;
+    margin-top: 50px;
+    position: relative;
 }
 
 .forecastDay {
-  position: relative;
-  height: 400px;
-  display:block;
-  margin: auto;
-  width: 262px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 3px 20px 5px rgba(0,0,0,0.39);
-  -moz-box-shadow: 0px 3px 20px 5px rgba(0,0,0,0.39);
-  box-shadow: 0px 3px 20px 5px rgba(0,0,0,0.39);
-  overflow: hidden;
+    position: relative;
+    height: 400px;
+    display: block;
+    margin: auto;
+    width: 262px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 3px 20px 5px rgba(0, 0, 0, 0.39);
+    -moz-box-shadow: 0px 3px 20px 5px rgba(0, 0, 0, 0.39);
+    box-shadow: 0px 3px 20px 5px rgba(0, 0, 0, 0.39);
+    overflow: hidden;
 }
 
 /*
@@ -181,42 +199,99 @@ body {
 */
 
 .rain {
-  background: lightblue; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(bottom, #141e30, #243b55); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(top, #141e30, #243b55); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(top, #141e30, #243b55); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to top, #141e30, #243b55); /* Standard syntax */
+    background: lightblue; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(
+        bottom,
+        #141e30,
+        #243b55
+    ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(
+        top,
+        #141e30,
+        #243b55
+    ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(
+        top,
+        #141e30,
+        #243b55
+    ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top, #141e30, #243b55); /* Standard syntax */
 }
 
 .cloudy {
-  background: #283048; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(bottom, #283048, #859398); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(top, #283048, #859398); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(top, #283048, #859398); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to top, #283048, #859398); /* Standard syntax */
+    background: #283048; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(
+        bottom,
+        #283048,
+        #859398
+    ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(
+        top,
+        #283048,
+        #859398
+    ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(
+        top,
+        #283048,
+        #859398
+    ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top, #283048, #859398); /* Standard syntax */
 }
 
 .sunny {
-  background: #cdeef6; /* For browsers that do not support gradients */
-  background: -webkit-radial-gradient(#d6f1f7, #bdebf6); /* For Safari 5.1 to 6.0 */
-  background: -o-radial-gradient(#d6f1f7, #bdebf6); /* For Opera 11.1 to 12.0 */
-  background: -moz-radial-gradient(#d6f1f7, #bdebf6); /* For Firefox 3.6 to 15 */
-  background: radial-gradient(#d6f1f7, #bdebf6); /* Standard syntax */
+    background: #cdeef6; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(
+        #d6f1f7,
+        #bdebf6
+    ); /* For Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(
+        #d6f1f7,
+        #bdebf6
+    ); /* For Opera 11.1 to 12.0 */
+    background: -moz-radial-gradient(
+        #d6f1f7,
+        #bdebf6
+    ); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#d6f1f7, #bdebf6); /* Standard syntax */
 }
 
 .windy {
-  background: rgb(150,213,242); /* Old browsers */
-  background: -moz-linear-gradient(top, rgba(150,213,242,1) 1%, rgba(94,217,242,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(150,213,242,1) 1%,rgba(94,217,242,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(150,213,242,1) 1%,rgba(94,217,242,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: rgb(150, 213, 242); /* Old browsers */
+    background: -moz-linear-gradient(
+        top,
+        rgba(150, 213, 242, 1) 1%,
+        rgba(94, 217, 242, 1) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+        top,
+        rgba(150, 213, 242, 1) 1%,
+        rgba(94, 217, 242, 1) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+        to bottom,
+        rgba(150, 213, 242, 1) 1%,
+        rgba(94, 217, 242, 1) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .snow {
-  background: #283048; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(bottom, #0a5781, #70c1d4); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(top, #0a5781, #70c1d4); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(top, #0a5781, #70c1d4); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to top, #0a5781, #70c1d4); /* Standard syntax */
+    background: #283048; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(
+        bottom,
+        #0a5781,
+        #70c1d4
+    ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(
+        top,
+        #0a5781,
+        #70c1d4
+    ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(
+        top,
+        #0a5781,
+        #70c1d4
+    ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top, #0a5781, #70c1d4); /* Standard syntax */
 }
 
 /*
@@ -226,21 +301,21 @@ body {
 */
 /* Scale effect - Cards */
 .card {
-  display: none;
-  opacity: 0;
+    display: none;
+    opacity: 0;
 }
 
 /* Hover effect - Cards */
 .forecastDay:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-  box-shadow: none;
-  -webkit-box-shadow: 0px 3px 20px 5px rgba(0,0,0,0.39);
-  -moz-box-shadow: 0px 3px 20px 5px rgba(0,0,0,0.39);
-  box-shadow: 0px 3px 20px 5px rgba(0,0,0,0.39);
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: none;
+    -webkit-box-shadow: 0px 3px 20px 5px rgba(0, 0, 0, 0.39);
+    -moz-box-shadow: 0px 3px 20px 5px rgba(0, 0, 0, 0.39);
+    box-shadow: 0px 3px 20px 5px rgba(0, 0, 0, 0.39);
 }
 .forecastDay {
-  transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
 }
 /*
   ========================================
@@ -252,29 +327,28 @@ body {
   Note - Cards needs a fixed width for Lokar's snowfall to work. max-width does not work.
 */
 @media (max-width: 1199px) {
-  .forecastDay {
-    width: 212px;
-  }
-}
-    
-@media (max-width: 1199px) {
-  .forecastDay {
-    width: 212px;
-  }
+    .forecastDay {
+        width: 212px;
+    }
 }
 
+@media (max-width: 1199px) {
+    .forecastDay {
+        width: 212px;
+    }
+}
 
 @media (max-width: 991px) {
-  .forecastDay {
-    width: 265px;
-  }
+    .forecastDay {
+        width: 265px;
+    }
 }
 
 @media (max-width: 576px) {
-  #city {
-    font-size: 2.5rem;
-  }
-  #city input {
-    width: 300px;
-  }
+    #city {
+        font-size: 2.5rem;
+    }
+    #city input {
+        width: 300px;
+    }
 }
